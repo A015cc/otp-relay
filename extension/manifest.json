@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "OTP Relay 自动填充",
+  "version": "1.0.0",
+  "description": "把 iPhone 短信验证码从自建 NAS 中转服务自动填入当前网页。",
+  "permissions": ["storage", "alarms"],
+  "host_permissions": ["http://*/*", "https://*/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "OTP Relay"
+  }
+}

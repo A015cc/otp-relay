@@ -1,0 +1,13 @@
+{
+  "name": "otp-relay",
+  "version": "1.0.0",
+  "description": "Forward iPhone SMS verification codes to your Windows browser over your own LAN.",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "start": "bun server.js"
+  },
+  "engines": {
+    "bun": ">=1.0.0"
+  }
+}
